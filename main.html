@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Fatema ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 182, 193, 0.6), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(255, 105, 180, 0.3), transparent 40%),
+        linear-gradient(135deg, #fff7fa 0%, #ffe9f1 45%, #fff 100%);
+      color: #3b2530;
+      min-height: 100vh;
+      padding: 24px 14px 50px;
+    }
+
+    .card {
+      max-width: 840px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 32px;
+      box-shadow: 0 24px 70px rgba(190, 80, 120, 0.18);
+      overflow: hidden;
+      position: relative;
+      animation: card-enter 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .hero {
+      padding: 54px 26px 34px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255, 228, 238, 0.9), rgba(255, 255, 255, 0));
+    }
+
+    .tiny-label {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #fff0f5;
+      color: #c2185b;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      border: 1px solid #ffd0df;
+      margin-bottom: 18px;
+      animation: fade-up 700ms 150ms both;
+      transition: background-color 250ms ease, color 250ms ease, transform 250ms ease;
+    }
+
+    .tiny-label:hover {
+      background: #ffe3ec;
+      color: #a20d46;
+      transform: translateY(-2px);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(34px, 7vw, 62px);
+      line-height: 1.12;
+      color: #b0124f;
+      margin-bottom: 10px;
+      animation: fade-up 800ms 280ms both;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: clamp(20px, 4vw, 28px);
+      color: #7a3a52;
+      font-weight: 500;
+      margin-top: 8px;
+    }
+
+    .date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      background: #fff;
+      border: 1px solid #ffd1df;
+      color: #a20d46;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(190, 80, 120, 0.12);
+      animation: fade-up 800ms 420ms both;
+      transition: transform 250ms ease, box-shadow 250ms ease;
+    }
+
+    .date-badge:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(190, 80, 120, 0.2);
+    }
+
+    .photo-main {
+      margin: 0 24px 20px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 6px solid #fff;
+      box-shadow: 0 18px 50px rgba(150, 50, 90, 0.2);
+      aspect-ratio: 4 / 5;
+      max-height: 600px;
+      animation: fade-up 900ms 550ms both;
+      transition: transform 350ms ease, box-shadow 350ms ease;
+    }
+
+    .photo-main:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 55px rgba(150, 50, 90, 0.28);
+    }
+
+    .photo-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .photo-main:hover img {
+      transform: scale(1.04);
+    }
+
+    .journey-title {
+      text-align: center;
+      font-size: 20px;
+      color: #a20d46;
+      font-weight: 600;
+      margin: 20px 0 10px;
+      padding: 0 20px;
+      animation: fade-up 700ms 650ms both;
+    }
+
+    .timeline-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 24px 24px;
+    }
+
+    .timeline-box {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 4px solid #fff;
+      box-shadow: 0 12px 30px rgba(150, 50, 90, 0.15);
+      position: relative;
+      aspect-ratio: 3 / 4;
+      animation: fade-up 700ms both;
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+
+    .timeline-box:nth-child(1) {
+      animation-delay: 750ms;
+    }
+
+    .timeline-box:nth-child(2) {
+      animation-delay: 850ms;
+    }
+
+    .timeline-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(150, 50, 90, 0.24);
+    }
+
+    .timeline-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .timeline-box:hover img,
+    .photo-grid div:hover img {
+      transform: scale(1.07);
+    }
+
+    .timeline-label {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: white;
+      padding: 20px 10px 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding: 0 24px 30px;
+    }
+
+    .photo-grid div {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 4px solid #fff;
+      aspect-ratio: 1 / 1;
+      box-shadow: 0 12px 30px rgba(150, 50, 90, 0.14);
+      animation: fade-up 700ms both;
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+
+    .photo-grid div:nth-child(1) { animation-delay: 950ms; }
+    .photo-grid div:nth-child(2) { animation-delay: 1050ms; }
+    .photo-grid div:nth-child(3) { animation-delay: 1150ms; }
+    .photo-grid div:nth-child(4) { animation-delay: 1250ms; }
+
+    .photo-grid div:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(150, 50, 90, 0.24);
+    }
+
+    .photo-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .section {
+      padding: 30px 28px;
+      border-top: 1px dashed rgba(190, 80, 120, 0.22);
+      animation: fade-up 800ms 1350ms both;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      color: #a20d46;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2::before {
+      content: "♥";
+      color: #ff5c8a;
+      font-size: 18px;
+    }
+
+    .section p {
+      font-size: 17px;
+      line-height: 1.95;
+      color: #523744;
+      margin-bottom: 14px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, #fff0f5, #ffe3ec);
+      border-left: 5px solid #ff5c8a;
+      padding: 18px 20px;
+      border-radius: 0 18px 18px 0;
+      font-weight: 600;
+      color: #8f0b3d;
+      line-height: 1.9;
+      margin-top: 10px;
+      transition: transform 300ms ease, box-shadow 300ms ease;
+    }
+
+    .highlight:hover {
+      transform: translateX(5px);
+      box-shadow: 0 10px 24px rgba(190, 80, 120, 0.1);
+    }
+
+    .wish-box {
+      margin: 8px 24px 30px;
+      padding: 18px;
+      text-align: center;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(255, 228, 238, 0.95), rgba(255, 255, 255, 0.9));
+      border: 1px solid #ffd0df;
+      box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.55);
+      animation: fade-up 800ms 1450ms both;
+      transition: transform 350ms ease, box-shadow 350ms ease;
+    }
+
+    .wish-box:hover {
+      transform: translateY(-5px);
+      box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.55), 0 18px 35px rgba(190, 80, 120, 0.14);
+    }
+
+    .wish-toggle {
+      width: 100%;
+      border: 0;
+      border-radius: 20px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.72);
+      color: #a20d46;
+      font: inherit;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 250ms ease, transform 250ms ease;
+    }
+
+    .wish-toggle:hover,
+    .wish-toggle:focus-visible {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+
+    .wish-toggle:focus-visible {
+      outline: 3px solid rgba(255, 92, 138, 0.35);
+      outline-offset: 3px;
+    }
+
+    .wish-icon {
+      display: inline-block;
+      font-size: 28px;
+      animation: gift-wiggle 2.2s ease-in-out infinite;
+    }
+
+    .wish-arrow {
+      display: inline-block;
+      font-size: 22px;
+      transition: transform 350ms ease;
+    }
+
+    .wish-box.is-open .wish-arrow {
+      transform: rotate(180deg);
+    }
+
+    .wish-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transform: translateY(-12px) scale(0.98);
+      transition: grid-template-rows 650ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 350ms ease, transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .wish-content-inner {
+      overflow: hidden;
+      padding: 0 6px;
+    }
+
+    .wish-box.is-open .wish-content {
+      grid-template-rows: 1fr;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .wish-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 5vw, 40px);
+      color: #b0124f;
+      margin: 28px 0 12px;
+    }
+
+    .surprise-title {
+      margin: 24px 0 14px;
+      color: #8f0b3d;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .surprise-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .surprise-option {
+      min-height: 108px;
+      padding: 14px 10px;
+      border: 1px solid #ffd0df;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.8);
+      color: #8f0b3d;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(190, 80, 120, 0.08);
+      transition: transform 250ms ease, background-color 250ms ease,
+        border-color 250ms ease, box-shadow 250ms ease;
+    }
+
+    .surprise-option span {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 28px;
+    }
+
+    .surprise-option:hover,
+    .surprise-option:focus-visible {
+      background: #fff0f5;
+      border-color: #ff9fbd;
+      transform: translateY(-5px) rotate(-1deg);
+      box-shadow: 0 14px 26px rgba(190, 80, 120, 0.16);
+    }
+
+    .surprise-option:nth-child(2):hover,
+    .surprise-option:nth-child(2):focus-visible {
+      transform: translateY(-5px) rotate(1deg);
+    }
+
+    .surprise-option:focus-visible {
+      outline: 3px solid rgba(255, 92, 138, 0.3);
+      outline-offset: 3px;
+    }
+
+    .surprise-option.is-selected {
+      background: linear-gradient(135deg, #fff0f5, #ffe3ec);
+      border-color: #ff5c8a;
+      box-shadow: 0 0 0 3px rgba(255, 92, 138, 0.12),
+        0 14px 26px rgba(190, 80, 120, 0.16);
+      transform: translateY(-4px);
+    }
+
+    .surprise-result {
+      min-height: 0;
+      margin-top: 0;
+      padding: 0 16px;
+      border-radius: 16px;
+      background: #fff;
+      color: #8f0b3d;
+      font-size: 16px;
+      line-height: 1.8;
+      opacity: 0;
+      transform: scale(0.94);
+      transition: min-height 400ms ease, margin-top 400ms ease,
+        padding 400ms ease, opacity 400ms ease, transform 400ms ease;
+    }
+
+    .surprise-result.is-visible {
+      min-height: 62px;
+      margin-top: 18px;
+      padding: 14px 16px;
+      opacity: 1;
+      transform: scale(1);
+      animation: surprise-pop 500ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .surprise-result-icon {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 30px;
+    }
+
+    .surprise-result-title {
+      display: block;
+      color: #b0124f;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .surprise-result-text {
+      display: block;
+      min-height: 30px;
+    }
+
+    .unlock-status {
+      margin: 18px 0 0;
+      color: #a20d46;
+      font-size: 13px;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    .final-surprise {
+      display: none;
+      width: 100%;
+      margin-top: 14px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #b0124f, #ff5c8a);
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(176, 18, 79, 0.2);
+      transition: transform 250ms ease, box-shadow 250ms ease;
+    }
+
+    .final-surprise.is-ready {
+      display: block;
+      animation: surprise-pop 600ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .final-surprise:hover,
+    .final-surprise:focus-visible {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(176, 18, 79, 0.3);
+    }
+
+    .final-surprise:focus-visible {
+      outline: 3px solid rgba(255, 92, 138, 0.35);
+      outline-offset: 3px;
+    }
+
+    .celebration {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(59, 37, 48, 0.35);
+      backdrop-filter: blur(7px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 350ms ease;
+    }
+
+    .celebration.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .celebration-card {
+      position: relative;
+      max-width: 460px;
+      width: 100%;
+      padding: 38px 26px;
+      overflow: hidden;
+      text-align: center;
+      border: 5px solid #fff;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #fff0f5, #fff);
+      box-shadow: 0 25px 80px rgba(59, 37, 48, 0.28);
+      transform: translateY(28px) scale(0.86) rotate(-2deg);
+      transition: transform 550ms cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .celebration.is-visible .celebration-card {
+      transform: translateY(0) scale(1) rotate(0);
+    }
+
+    .celebration-card::before,
+    .celebration-card::after {
+      content: "♥";
+      position: absolute;
+      color: rgba(255, 92, 138, 0.2);
+      font-size: 72px;
+      animation: float-heart 3s ease-in-out infinite;
+    }
+
+    .celebration-card::before {
+      top: -18px;
+      left: 18px;
+    }
+
+    .celebration-card::after {
+      right: 18px;
+      bottom: -24px;
+      animation-delay: 700ms;
+    }
+
+    .celebration-card h3 {
+      position: relative;
+      margin-bottom: 12px;
+      color: #b0124f;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 7vw, 44px);
+    }
+
+    .celebration-card p {
+      position: relative;
+      color: #5c3546;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .celebration-close {
+      position: relative;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 1px solid #ffb1c8;
+      border-radius: 999px;
+      background: #fff;
+      color: #a20d46;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .wish-box p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #5c3546;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .promises {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .promise {
+      background: #fff;
+      border: 1px solid #ffd6e3;
+      border-radius: 18px;
+      padding: 16px 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #8f0b3d;
+      box-shadow: 0 8px 20px rgba(190, 80, 120, 0.08);
+      transition: transform 250ms ease, box-shadow 250ms ease, background-color 250ms ease;
+    }
+
+    .promise:hover {
+      background: #fff7fa;
+      transform: translateY(-5px);
+      box-shadow: 0 14px 26px rgba(190, 80, 120, 0.15);
+    }
+
+    .promise span {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .footer {
+      padding: 28px 24px 36px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent, rgba(255, 224, 236, 0.75));
+      animation: fade-up 800ms 1550ms both;
+    }
+
+    .footer .from {
+      font-size: 15px;
+      color: #7a3a52;
+      margin-bottom: 8px;
+    }
+
+    .footer .forever {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #b0124f;
+      letter-spacing: 0.4px;
+    }
+
+    .footer .ps {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #8a596a;
+      font-style: italic;
+    }
+
+    @keyframes card-enter {
+      from {
+        opacity: 0;
+        transform: translateY(28px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fade-up {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes gift-wiggle {
+      0%, 75%, 100% {
+        transform: rotate(0);
+      }
+      80% {
+        transform: rotate(-8deg);
+      }
+      85% {
+        transform: rotate(8deg);
+      }
+      90% {
+        transform: rotate(-5deg);
+      }
+    }
+
+    @keyframes surprise-pop {
+      0% {
+        transform: scale(0.88) rotate(-2deg);
+      }
+      65% {
+        transform: scale(1.04) rotate(1deg);
+      }
+      100% {
+        transform: scale(1) rotate(0);
+      }
+    }
+
+    @keyframes float-heart {
+      0%, 100% {
+        transform: translateY(0) rotate(-8deg);
+      }
+      50% {
+        transform: translateY(-14px) rotate(8deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+      }
+
+      .wish-icon {
+        animation: none !important;
+      }
+
+      .surprise-result.is-visible {
+        animation: none !important;
+      }
+
+      .celebration-card::before,
+      .celebration-card::after {
+        animation: none !important;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .photo-grid, .promises, .surprise-options {
+        grid-template-columns: 1fr;
+      }
+      .photo-main {
+        margin: 0 16px 20px;
+      }
+      .photo-grid, .timeline-container {
+        padding: 0 16px 24px;
+      }
+      .wish-box {
+        margin: 8px 16px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <section class="hero">
+      <div class="tiny-label">A Journey of Us 💌</div>
+      <h1>
+        Happy Birthday
+        <span>Fatema ❤️</span>
+      </h1>
+      <div class="date-badge">🎂 04 November 2002</div>
+    </section>
+
+    <!-- MAIN GRADUATION PHOTO -->
+    <div class="photo-main">
+      <img src="imgs/WhatsApp Image 2026-11-03 at 11.55.22 PM.jpeg" alt="Graduation Day" />
+    </div>
+
+    <div class="journey-title">✨ ভার্সিটি লাইফের শুরু থেকে গ্র্যাজুয়েশন ✨</div>
+
+    <!-- TIMELINE: START TO END -->
+    <div class="timeline-container">
+      <div class="timeline-box">
+        <img src="imgs/versity start.jpeg" alt="University Start" />
+        <div class="timeline-label">ভার্সিটি লাইফের শুরু</div>
+      </div>
+      <div class="timeline-box">
+        <img src="imgs/WhatsApp Image 2026-11-03 at 11.55.22 PM (1).jpeg" alt="Graduation Thesis" />
+        <div class="timeline-label">থিসিস বুক হাতে গ্র্যাজুয়েশন</div>
+      </div>
+    </div>
+
+    <!-- MIDDLE PHOTOS -->
+    <div class="photo-grid">
+      <div>
+        <img src="imgs/WhatsApp Image 2026-11-03 at 11.55.18 PM (1).jpeg" alt="Campus Selfie" />
+      </div>
+      <div>
+        <img src="imgs/WhatsApp Image 2026-11-03 at 11.55.18 PM (3).jpeg" alt="Campus Window" />
+      </div>
+      <div>
+        <img src="imgs/WhatsApp Image 2026-11-03 at 11.55.20 PM (1).jpeg" alt="A Special Memory" />
+      </div>
+      <div>
+        <img src="imgs/WhatsApp Image 2026-11-03 at 11.55.21 PM.jpeg" alt="Happy Memory" />
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>তুমি আমার জীবনের best moment</h2>
+      <p>
+        Fatema, ভার্সিটির প্রথম দিন থেকে আজকের গ্র্যাজুয়েশন—তোমার সাথে কাটানো প্রতিটা দিন আমার কাছে এক একটা সুন্দর স্মৃতি। 
+        তুমি আমার হাসির কারণ, আমার শান্তি, আর আমার সবচেয়ে সুন্দর অভ্যাস। 
+        ছবিগুলোতে যেমন দেখো, শুরুতে যেমন ছিলাম, আর এখন আমরা কতটা পথ পেরিয়ে এসেছি—আমি চাই এই পথচলা আরও অনেক দূর যাক।
+      </p>
+      <div class="highlight">
+        আমার জীবনের সবচেয়ে সুন্দর মুহূর্তগুলো তোমার সাথে জড়িয়ে আছে — 
+        আর আমি চাই বাকি জীবনটাও তোমার সাথেই কাটুক, তোমার হাতটা ধরে।
+      </div>
+    </section>
+
+    <div class="wish-box">
+      <button class="wish-toggle" type="button" aria-expanded="false" aria-controls="birthday-wish">
+        <span class="wish-icon" aria-hidden="true">🎁</span>
+        <span>তোমার জন্য একটি special birthday wish</span>
+        <span class="wish-arrow" aria-hidden="true">⌄</span>
+      </button>
+      <div class="wish-content" id="birthday-wish">
+        <div class="wish-content-inner">
+          <h3>Happy Birthday, Fatema 🎂</h3>
+          <p>
+            তোমার এই দিনটা এমন হোক যেন সারাজীবন মনে রাখো। 
+            তোমার মুখের হাসিটা কখনো হারিয়ে না যাক, 
+            তোমার সব স্বপ্ন পূরণ হোক। 
+            আমরা যেন একসাথে আরও অনেক বড় সাফল্য দেখতে পাই। 
+            আর আমি যেন সবসময় তোমার পাশে থাকতে পারি — এইটাই আমার চাওয়া।
+          </p>
+          <div class="surprise-title">একটা option বেছে নাও, তোমার surprise অপেক্ষা করছে ✨</div>
+          <div class="surprise-options" role="group" aria-label="Birthday surprise options">
+            <button class="surprise-option" type="button" data-icon="💌" data-title="ভালোবাসার চিঠি" data-surprise="তুমি আমার জীবনের সবচেয়ে সুন্দর surprise — আজ, কাল, সবসময়। ❤️">
+              <span aria-hidden="true">💌</span>
+              ভালোবাসার চিঠি
+            </button>
+            <button class="surprise-option" type="button" data-icon="✨" data-title="Secret message" data-surprise="তোমার হাসি দেখলেই আমার প্রতিটা দিন special হয়ে যায়। 😊">
+              <span aria-hidden="true">✨</span>
+              Secret message
+            </button>
+            <button class="surprise-option" type="button" data-icon="🎁" data-title="Secret promise" data-surprise="এই birthday promise রইল: যত দূরই যাই, তোমার হাতটা ধরে রাখব। 🤝">
+              <span aria-hidden="true">🎁</span>
+              Secret promise
+            </button>
+          </div>
+          <div class="surprise-result" aria-live="polite">
+            <span class="surprise-result-icon" aria-hidden="true"></span>
+            <span class="surprise-result-title"></span>
+            <span class="surprise-result-text"></span>
+          </div>
+          <div class="unlock-status">0/3 surprise unlocked</div>
+          <button class="final-surprise" type="button">সবগুলো খুলেছি — final surprise দেখাও 💖</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>আমার ছোট্ট প্রতিজ্ঞা</h2>
+      <div class="promises">
+        <div class="promise"><span>🤝</span>তোমার পাশে থাকব</div>
+        <div class="promise"><span>😊</span>তোমার হাসি আগলে রাখব</div>
+        <div class="promise"><span>♾️</span>সারাজীবন একসাথে</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>আমি চাই আমরা সারাজীবন একসাথে থাকি</h2>
+      <p>
+        আমি জানি জীবনে সব দিন একরকম থাকে না। কিন্তু আমি চাই —
+        ভালো দিনে তোমার হাসির অংশীদার হতে, আর কঠিন দিনে তোমার হাতটা ধরে থাকতে।
+        আমি শুধু আজকের জন্য নয়, অনেক অনেক দিনের জন্য তোমাকে চাই।
+      </p>
+      <p>
+        আমার একটাই expectation — <strong>আমরা একসাথে সারাজীবন কাটাতে চাই।</strong>
+        প্রতিটা জন্মদিনে তোমার পাশে থাকতে চাই, প্রতিটা নতুন বছরে তোমার হাতটা ধরে নতুন স্বপ্ন দেখতে চাই।
+        গ্র্যাজুয়েশনের এই দিনটা যেমন আমাদের একসাথে দেখা একটা স্বপ্ন পূরণ, তেমনি বাকি জীবনটাও তোমার সাথে স্বপ্ন দেখতে চাই।
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div class="from">From: তোমার ভালোবাসার মানুষ</div>
+      <div class="forever">Forever & Always ❤️</div>
+      <div class="ps">P.S. তোমার সাথে পুরো জীবনটা কাটাতে চাই।</div>
+    </footer>
+  </main>
+
+  <div class="celebration" role="dialog" aria-modal="true" aria-labelledby="celebration-title">
+  <div class="celebration-card">
+    <h3 id="celebration-title">For You, Fatema 💖</h3>
+    <p>তোমার জন্য আমার সবচেয়ে বড় wish—তুমি সবসময় হাসিখুশি থাকো, আর আমাদের গল্পটা প্রতিদিন আরও সুন্দর হোক। Happy Birthday! 🎂✨</p>
+    <button class="celebration-close" type="button">আবার card-এ ফিরে যাই</button>
+  </div>
+  </div>
+
+  <script>
+  const wishBox = document.querySelector('.wish-box');
+  const wishToggle = document.querySelector('.wish-toggle');
+  const surpriseOptions = document.querySelectorAll('.surprise-option');
+  const surpriseResult = document.querySelector('.surprise-result');
+  const surpriseResultIcon = document.querySelector('.surprise-result-icon');
+  const surpriseResultTitle = document.querySelector('.surprise-result-title');
+  const surpriseResultText = document.querySelector('.surprise-result-text');
+  const unlockStatus = document.querySelector('.unlock-status');
+  const finalSurprise = document.querySelector('.final-surprise');
+  const celebration = document.querySelector('.celebration');
+  const celebrationClose = document.querySelector('.celebration-close');
+  const unlockedSurprises = new Set();
+  let typingRun = 0;
+
+  wishToggle.addEventListener('click', () => {
+    const isOpen = wishBox.classList.toggle('is-open');
+    wishToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  surpriseOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      surpriseOptions.forEach((item) => item.classList.remove('is-selected'));
+      option.classList.add('is-selected');
+      unlockedSurprises.add(option.dataset.title);
+      surpriseResultIcon.textContent = option.dataset.icon;
+      surpriseResultTitle.textContent = option.dataset.title;
+      surpriseResultText.textContent = '';
+      surpriseResult.classList.remove('is-visible');
+      requestAnimationFrame(() => {
+        surpriseResult.classList.add('is-visible');
+        typeMessage(surpriseResultText, option.dataset.surprise);
+      });
+      unlockStatus.textContent = `${unlockedSurprises.size}/3 surprise unlocked`;
+      if (unlockedSurprises.size === surpriseOptions.length) {
+        finalSurprise.classList.add('is-ready');
+      }
+    });
+  });
+
+  finalSurprise.addEventListener('click', () => {
+    celebration.classList.add('is-visible');
+    celebrationClose.focus();
+  });
+
+  const closeCelebration = () => {
+    celebration.classList.remove('is-visible');
+    finalSurprise.focus();
+  };
+
+  celebrationClose.addEventListener('click', closeCelebration);
+  celebration.addEventListener('click', (event) => {
+    if (event.target === celebration) closeCelebration();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && celebration.classList.contains('is-visible')) {
+      closeCelebration();
+    }
+  });
+
+  function typeMessage(element, message) {
+    const currentRun = ++typingRun;
+    let index = 0;
+    const typeNextCharacter = () => {
+      if (currentRun !== typingRun) return;
+      if (index >= message.length) return;
+      element.textContent += message[index];
+      index += 1;
+      window.setTimeout(typeNextCharacter, 22);
+    };
+    typeNextCharacter();
+  }
+  </script>
+
+</body>
+</html>
